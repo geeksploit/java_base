@@ -16,6 +16,7 @@ class Main {
 
         Logger loggerJava = Logger.getLogger("org.stepic.java");
         loggerJava.setLevel(Level.ALL);
+        loggerJava.setUseParentHandlers(false);
     }
 //Stepik code: end
 }
