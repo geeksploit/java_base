@@ -8,6 +8,7 @@ class Main {
         loggerClassA.setLevel(Level.ALL);
 
         Logger loggerClassB = Logger.getLogger("org.stepic.java.logging.ClassB");
+        loggerClassB.setLevel(Level.WARNING);
     }
 //Stepik code: end
 }
