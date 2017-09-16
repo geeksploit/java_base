@@ -6,6 +6,8 @@ class Main {
         // your implementation here
         Logger loggerClassA = Logger.getLogger("org.stepic.java.logging.ClassA");
         loggerClassA.setLevel(Level.ALL);
+
+        Logger loggerClassB = Logger.getLogger("org.stepic.java.logging.ClassB");
     }
 //Stepik code: end
 }
