@@ -11,6 +11,8 @@ class Main {
         loggerClassB.setLevel(Level.WARNING);
 
         Handler consoleHandler = new ConsoleHandler();
+        consoleHandler.setLevel(Level.ALL);
+        consoleHandler.setFormatter(new XMLFormatter());
     }
 //Stepik code: end
 }
