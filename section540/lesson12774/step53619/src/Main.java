@@ -1,3 +1,5 @@
+import java.util.logging.*;
+
 class Main {
     //Stepik code: start
     public static void configureLogging() {
