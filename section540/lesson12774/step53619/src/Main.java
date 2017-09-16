@@ -9,6 +9,8 @@ class Main {
 
         Logger loggerClassB = Logger.getLogger("org.stepic.java.logging.ClassB");
         loggerClassB.setLevel(Level.WARNING);
+
+        Handler consoleHandler = new ConsoleHandler();
     }
 //Stepik code: end
 }
