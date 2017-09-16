@@ -13,6 +13,8 @@ class Main {
         Handler consoleHandler = new ConsoleHandler();
         consoleHandler.setLevel(Level.ALL);
         consoleHandler.setFormatter(new XMLFormatter());
+
+        Logger loggerJava = Logger.getLogger("org.stepic.java");
     }
 //Stepik code: end
 }
