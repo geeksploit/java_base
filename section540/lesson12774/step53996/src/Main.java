@@ -93,6 +93,7 @@ public static class Inspector implements MailService {
         if (!(mail instanceof MailPackage)) {
             return mail;
         }
+        MailPackage mailPackage = (MailPackage) mail;
         return mail;
     }
 }
