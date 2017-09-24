@@ -55,6 +55,7 @@ public static class Thief implements MailService {
     private int minPriceToSteal;
 
     public Thief(int minPriceToSteal) {
+        this.minPriceToSteal = minPriceToSteal;
     }
 
     @Override
