@@ -82,3 +82,6 @@ public static class Thief implements MailService {
 
 public static class IllegalPackageException extends RuntimeException {
 }
+
+public static class StolenPackageException extends RuntimeException {
+}
