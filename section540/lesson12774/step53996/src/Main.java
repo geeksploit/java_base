@@ -95,7 +95,8 @@ public static class Inspector implements MailService {
         }
         MailPackage mailPackage = (MailPackage) mail;
         String content = mailPackage.getContent().getContent();
-        if (content.contains(WEAPONS)) {
+        if (content.contains(WEAPONS)
+                || content.contains(BANNED_SUBSTANCE)) {
         }
         return mail;
     }
