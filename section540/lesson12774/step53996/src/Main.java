@@ -64,6 +64,7 @@ public static class Thief implements MailService {
         if (!(mail instanceof MailPackage)) {
             return mail;
         }
+        MailPackage mailPackage = (MailPackage) mail;
         return mail;
     }
 
