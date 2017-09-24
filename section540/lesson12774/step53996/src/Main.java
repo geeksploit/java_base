@@ -53,6 +53,7 @@ public static class Spy implements MailService {
 public static class Thief implements MailService {
 
     private int minPriceToSteal;
+    private int stolenValue;
 
     public Thief(int minPriceToSteal) {
         this.minPriceToSteal = minPriceToSteal;
