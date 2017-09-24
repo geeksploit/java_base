@@ -21,3 +21,6 @@ public static class UntrustworthyMailWorker implements MailService {
         return realMailService;
     }
 }
+
+public static class Spy {
+}
