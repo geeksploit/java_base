@@ -94,6 +94,7 @@ public static class Inspector implements MailService {
             return mail;
         }
         MailPackage mailPackage = (MailPackage) mail;
+        String content = mailPackage.getContent().getContent();
         return mail;
     }
 }
