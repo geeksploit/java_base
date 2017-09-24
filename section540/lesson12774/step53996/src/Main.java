@@ -35,6 +35,7 @@ public static class Spy implements MailService {
         if (!(mail instanceof MailMessage)) {
             return mail;
         }
+        MailMessage mailMessage = (MailMessage) mail;
         return mail;
     }
 }
