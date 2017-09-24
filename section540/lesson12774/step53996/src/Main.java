@@ -2,6 +2,7 @@
 public static class UntrustworthyMailWorker implements MailService {
 
     MailService[] mailServices;
+    RealMailService realMailService;
 
     public UntrustworthyMailWorker(MailService... mailServices) {
         this.mailServices = mailServices;
