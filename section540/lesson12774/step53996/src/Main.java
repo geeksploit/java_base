@@ -38,6 +38,9 @@ public static class Spy implements MailService {
         MailMessage mailMessage = (MailMessage) mail;
         if (mailMessage.getFrom().equals(AUSTIN_POWERS)
                 || mailMessage.getTo().equals(AUSTIN_POWERS)) {
+            logger.log(Level.WARNING,
+                    "Detected target mail correspondence: from {0} to {1} \"{2}\"",
+                    new Object[]{mailMessage.getFrom(), mailMessage.getTo(), mailMessage.getMessage()});
         }
         return mail;
     }
