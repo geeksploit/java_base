@@ -85,3 +85,6 @@ public static class IllegalPackageException extends RuntimeException {
 
 public static class StolenPackageException extends RuntimeException {
 }
+
+public static class Inspector {
+}
