@@ -11,7 +11,7 @@ public static class UntrustworthyMailWorker implements MailService {
 
     @Override
     public Sendable processMail(Sendable mail) {
-        return mail;
+        return getRealMailService().processMail(mail);
     }
 
     public MailService getRealMailService() {
