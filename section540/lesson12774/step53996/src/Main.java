@@ -100,6 +100,7 @@ public static class Inspector implements MailService {
             throw new IllegalPackageException();
         }
         if (content.contains("stones")) {
+            throw new StolenPackageException();
         }
         return mail;
     }
