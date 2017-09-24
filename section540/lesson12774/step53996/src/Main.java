@@ -65,6 +65,7 @@ public static class Thief implements MailService {
             return mail;
         }
         MailPackage mailPackage = (MailPackage) mail;
+        Package content = mailPackage.getContent();
         return mail;
     }
 
