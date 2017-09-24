@@ -90,6 +90,9 @@ public static class Inspector implements MailService {
 
     @Override
     public Sendable processMail(Sendable mail) {
+        if (!(mail instanceof MailPackage)) {
+            return mail;
+        }
         return mail;
     }
 }
