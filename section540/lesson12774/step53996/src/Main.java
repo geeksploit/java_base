@@ -32,6 +32,9 @@ public static class Spy implements MailService {
 
     @Override
     public Sendable processMail(Sendable mail) {
+        if (!(mail instanceof MailMessage)) {
+            return mail;
+        }
         return mail;
     }
 }
