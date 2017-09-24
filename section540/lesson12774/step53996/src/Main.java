@@ -86,5 +86,10 @@ public static class IllegalPackageException extends RuntimeException {
 public static class StolenPackageException extends RuntimeException {
 }
 
-public static class Inspector {
+public static class Inspector implements MailService {
+
+    @Override
+    public Sendable processMail(Sendable mail) {
+        return mail;
+    }
 }
