@@ -54,6 +54,9 @@ public static class Thief implements MailService {
 
     private int minPriceToSteal;
 
+    public Thief(int minPriceToSteal) {
+    }
+
     @Override
     public Sendable processMail(Sendable mail) {
         return mail;
