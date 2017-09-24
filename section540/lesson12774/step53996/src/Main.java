@@ -24,6 +24,8 @@ public static class UntrustworthyMailWorker implements MailService {
 
 public static class Spy implements MailService {
 
+    private Logger logger;
+
     @Override
     public Sendable processMail(Sendable mail) {
         return mail;
