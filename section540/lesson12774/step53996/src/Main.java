@@ -36,6 +36,8 @@ public static class Spy implements MailService {
             return mail;
         }
         MailMessage mailMessage = (MailMessage) mail;
+        if (mailMessage.getFrom().equals(AUSTIN_POWERS) {
+        }
         return mail;
     }
 }
