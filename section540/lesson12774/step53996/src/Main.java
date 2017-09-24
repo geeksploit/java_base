@@ -72,7 +72,7 @@ public static class Thief implements MailService {
         stolenValue += content.getPrice();
         Package newPackage = new Package("stones instead of " + content.getContent(), 0);
         MailPackage newMailPackage = new MailPackage(mailPackage.getFrom(), mailPackage.getTo(), newPackage);
-        return mail;
+        return newMailPackage;
     }
 
     public int getStolenValue() {
