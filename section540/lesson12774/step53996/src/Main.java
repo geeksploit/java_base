@@ -49,3 +49,33 @@ public static class Spy implements MailService {
         return mail;
     }
 }
+
+public static class Thief implements MailService {
+
+    private int minPriceToSteal;
+    private int stolenValue;
+
+    public Thief(int minPriceToSteal) {
+        this.minPriceToSteal = minPriceToSteal;
+    }
+
+    @Override
+    public Sendable processMail(Sendable mail) {
+        if (!(mail instanceof MailPackage)) {
+            return mail;
+        }
+        MailPackage mailPackage = (MailPackage) mail;
+        Package content = mailPackage.getContent();
+        if (content.getPrice() < minPriceToSteal) {
+            return mailPackage;
+        }
+        stolenValue += content.getPrice();
+        Package newPackage = new Package("stones instead of " + content.getContent(), 0);
+        MailPackage newMailPackage = new MailPackage(mailPackage.getFrom(), mailPackage.getTo(), newPackage);
+        return newMailPackage;
+    }
+
+    public int getStolenValue() {
+        return stolenValue;
+    }
+}
