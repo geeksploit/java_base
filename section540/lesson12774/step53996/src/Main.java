@@ -26,6 +26,9 @@ public static class Spy implements MailService {
 
     private Logger logger;
 
+    public Spy(Logger logger) {
+    }
+
     @Override
     public Sendable processMail(Sendable mail) {
         return mail;
