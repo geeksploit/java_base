@@ -63,4 +63,8 @@ public static class Thief implements MailService {
     public Sendable processMail(Sendable mail) {
         return mail;
     }
+
+    public int getStolenValue() {
+        return stolenValue;
+    }
 }
