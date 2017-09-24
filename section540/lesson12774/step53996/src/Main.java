@@ -21,3 +21,31 @@ public static class UntrustworthyMailWorker implements MailService {
         return realMailService;
     }
 }
+
+public static class Spy implements MailService {
+
+    private Logger logger;
+
+    public Spy(Logger logger) {
+        this.logger = logger;
+    }
+
+    @Override
+    public Sendable processMail(Sendable mail) {
+        if (!(mail instanceof MailMessage)) {
+            return mail;
+        }
+        MailMessage mailMessage = (MailMessage) mail;
+        if (mailMessage.getFrom().equals(AUSTIN_POWERS)
+                || mailMessage.getTo().equals(AUSTIN_POWERS)) {
+            logger.log(Level.WARNING,
+                    "Detected target mail correspondence: from {0} to {1} \"{2}\"",
+                    new Object[]{mailMessage.getFrom(), mailMessage.getTo(), mailMessage.getMessage()});
+        } else {
+            logger.log(Level.INFO,
+                    "Usual correspondence: from {0} to {1}",
+                    new Object[]{mailMessage.getFrom(), mailMessage.getTo()});
+        }
+        return mail;
+    }
+}
