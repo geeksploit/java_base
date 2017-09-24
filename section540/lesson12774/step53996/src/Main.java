@@ -69,6 +69,7 @@ public static class Thief implements MailService {
         if (content.getPrice() < minPriceToSteal) {
             return mailPackage;
         }
+        stolenValue += content.getPrice();
         return mail;
     }
 
