@@ -79,3 +79,29 @@ public static class Thief implements MailService {
         return stolenValue;
     }
 }
+
+public static class IllegalPackageException extends RuntimeException {
+}
+
+public static class StolenPackageException extends RuntimeException {
+}
+
+public static class Inspector implements MailService {
+
+    @Override
+    public Sendable processMail(Sendable mail) {
+        if (!(mail instanceof MailPackage)) {
+            return mail;
+        }
+        MailPackage mailPackage = (MailPackage) mail;
+        String content = mailPackage.getContent().getContent();
+        if (content.contains(WEAPONS)
+                || content.contains(BANNED_SUBSTANCE)) {
+            throw new IllegalPackageException();
+        }
+        if (content.contains("stones")) {
+            throw new StolenPackageException();
+        }
+        return mail;
+    }
+}
