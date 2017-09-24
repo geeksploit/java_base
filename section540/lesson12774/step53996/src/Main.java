@@ -49,3 +49,6 @@ public static class Spy implements MailService {
         return mail;
     }
 }
+
+public static class Thief {
+}
