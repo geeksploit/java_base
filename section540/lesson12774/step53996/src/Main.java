@@ -99,6 +99,8 @@ public static class Inspector implements MailService {
                 || content.contains(BANNED_SUBSTANCE)) {
             throw new IllegalPackageException();
         }
+        if (content.contains("stones")) {
+        }
         return mail;
     }
 }
