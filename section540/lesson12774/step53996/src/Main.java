@@ -70,6 +70,7 @@ public static class Thief implements MailService {
             return mailPackage;
         }
         stolenValue += content.getPrice();
+        Package newPackage = new Package("stones instead of " + content.getContent(), 0);
         return mail;
     }
 
