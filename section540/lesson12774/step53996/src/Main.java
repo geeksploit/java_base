@@ -6,6 +6,7 @@ public static class UntrustworthyMailWorker implements MailService {
 
     public UntrustworthyMailWorker(MailService... mailServices) {
         this.mailServices = mailServices;
+        realMailService = new RealMailService();
     }
 
     @Override
