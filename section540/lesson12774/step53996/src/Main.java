@@ -50,5 +50,10 @@ public static class Spy implements MailService {
     }
 }
 
-public static class Thief {
+public static class Thief implements MailService {
+
+    @Override
+    public Sendable processMail(Sendable mail) {
+        return mail;
+    }
 }
