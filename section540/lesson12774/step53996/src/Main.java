@@ -41,6 +41,10 @@ public static class Spy implements MailService {
             logger.log(Level.WARNING,
                     "Detected target mail correspondence: from {0} to {1} \"{2}\"",
                     new Object[]{mailMessage.getFrom(), mailMessage.getTo(), mailMessage.getMessage()});
+        } else {
+            logger.log(Level.INFO,
+                    "Usual correspondence: from {0} to {1}",
+                    new Object[]{mailMessage.getFrom(), mailMessage.getTo()});
         }
         return mail;
     }
