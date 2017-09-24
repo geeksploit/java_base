@@ -13,4 +13,8 @@ public static class UntrustworthyMailWorker implements MailService {
     public Sendable processMail(Sendable mail) {
         return mail;
     }
+
+    public MailService getRealMailService() {
+        return realMailService;
+    }
 }
