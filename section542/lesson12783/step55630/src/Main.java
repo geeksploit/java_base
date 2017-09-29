@@ -5,6 +5,7 @@ class Main {
     //Stepik code: start
     public static int checkSumOfStream(InputStream inputStream) throws IOException {
         // your implementation here
+        int checkSum = 0;
         return 0;
     }
 //Stepik code: end
