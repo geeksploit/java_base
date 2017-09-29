@@ -8,6 +8,7 @@ class Main {
         int checkSum = 0;
         int nextByte;
         while ((nextByte = inputStream.read()) != -1) {
+            checkSum = Integer.rotateLeft(checkSum, 1) ^ nextByte;
         }
         return 0;
     }
