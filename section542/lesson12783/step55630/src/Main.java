@@ -10,7 +10,7 @@ class Main {
         while ((nextByte = inputStream.read()) != -1) {
             checkSum = Integer.rotateLeft(checkSum, 1) ^ nextByte;
         }
-        return 0;
+        return checkSum;
     }
 //Stepik code: end
 }
