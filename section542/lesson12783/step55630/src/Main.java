@@ -5,7 +5,12 @@ class Main {
     //Stepik code: start
     public static int checkSumOfStream(InputStream inputStream) throws IOException {
         // your implementation here
-        return 0;
+        int checkSum = 0;
+        int nextByte;
+        while ((nextByte = inputStream.read()) != -1) {
+            checkSum = Integer.rotateLeft(checkSum, 1) ^ nextByte;
+        }
+        return checkSum;
     }
 //Stepik code: end
 }
