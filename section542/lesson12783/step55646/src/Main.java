@@ -10,5 +10,6 @@ public class Main {
             }
             prev = next;
         }
+        System.out.flush();
     }
 }
