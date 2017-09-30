@@ -8,6 +8,7 @@ public class Main {
             if (prev != 13 || next != 10) {
                 System.out.write(prev);
             }
+            prev = next;
         }
     }
 }
