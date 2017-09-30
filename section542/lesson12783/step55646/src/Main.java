@@ -5,6 +5,8 @@ public class Main {
         int prev = System.in.read();
         while (prev != -1) {
             int next = System.in.read();
+            if (prev != 13 || next != 10) {
+            }
         }
     }
 }
