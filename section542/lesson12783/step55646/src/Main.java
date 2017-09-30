@@ -4,6 +4,7 @@ public class Main {
     public static void main(String... args) throws IOException{
         int prev = System.in.read();
         while (prev != -1) {
+            int next = System.in.read();
         }
     }
 }
