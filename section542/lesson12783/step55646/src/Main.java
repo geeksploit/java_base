@@ -6,6 +6,7 @@ public class Main {
         while (prev != -1) {
             int next = System.in.read();
             if (prev != 13 || next != 10) {
+                System.out.write(prev);
             }
         }
     }
