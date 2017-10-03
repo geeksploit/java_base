@@ -10,6 +10,8 @@ class Main {
         InputStreamReader inputStreamReader = new InputStreamReader(inputStream, charset);
         StringBuilder stringBuilder = new StringBuilder();
         int nextChar;
+        while ((nextChar = inputStreamReader.read()) != -1) {
+        }
         return "";
     }
 //Stepik code: end
