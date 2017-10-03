@@ -11,6 +11,7 @@ class Main {
         StringBuilder stringBuilder = new StringBuilder();
         int nextChar;
         while ((nextChar = inputStreamReader.read()) != -1) {
+            stringBuilder.append((char) nextChar);
         }
         return "";
     }
