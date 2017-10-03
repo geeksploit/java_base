@@ -13,7 +13,7 @@ class Main {
         while ((nextChar = inputStreamReader.read()) != -1) {
             stringBuilder.append((char) nextChar);
         }
-        return "";
+        return stringBuilder.toString();
     }
 //Stepik code: end
 }
