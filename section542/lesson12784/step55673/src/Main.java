@@ -8,6 +8,7 @@ class Main {
     public static String readAsString(InputStream inputStream, Charset charset) throws IOException {
         // your implementation here
         InputStreamReader inputStreamReader = new InputStreamReader(inputStream, charset);
+        StringBuilder stringBuilder = new StringBuilder();
         return "";
     }
 //Stepik code: end
