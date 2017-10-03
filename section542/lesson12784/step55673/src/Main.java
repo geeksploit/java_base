@@ -9,6 +9,7 @@ class Main {
         // your implementation here
         InputStreamReader inputStreamReader = new InputStreamReader(inputStream, charset);
         StringBuilder stringBuilder = new StringBuilder();
+        int nextChar;
         return "";
     }
 //Stepik code: end
